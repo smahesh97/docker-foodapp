@@ -1,0 +1,33 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJYnZkSWpRZU4rT0l3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TkRBM01UZ3hNREV4TVRaYUZ3MHpOREEzTVRZeE1ERTJNVFphTUJVeApFekFSQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUUN6bWJLek9HcVRWZmFhUUdhV2lhOHdxTXpNMkFHcXIvRno0OU1rZnhCWW5tU0x1QXVCMnFhekZwS2EKLzVUMDlqMVlGWitxSGwrQkVqNHl2T3pLdUtsZGp4bUk5SHAveWxyZFRZWnNMTm82N0RMSGdWN3I2Y2xqZU9TTwoyMEJ4RFBkeW9hUUhheXFzVjl4amliVEc4bkNZVTZvRzFKblhQVEdsSGRuMk05TDIyS3phVGxtWjc0dk5SVHhoCk5TblJtTGowQWorNVF0WXNYbGg0RWxGdFo3UnlWOTZzczJEdkhORjJQTTlMMlhuRlJmalcvOEpvL1ZxNVlOb0kKNlVKSzkrUFRwR3hjR0xqSCtrMHpOangrRHhlSG9JSXh5cGN2bnNGbk04bFB2VGRyVjE2cGFXY3F1MkJ4Q0FCOQpDem5ISEVXRnM1Y0RqWUZ0cEJDR1RtVDdhU0dEQWdNQkFBR2pXVEJYTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQCkJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJSczVUMktWdy9ndU9scTZ4TUFmL2FIYXFweWV6QVYKQmdOVkhSRUVEakFNZ2dwcmRXSmxjbTVsZEdWek1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQUNnOXdrVmtodgo5RGM5OG5nVEpLT0xGRWNsQmg3aE8vS1JLYWMzbGtndWNhR2tib3p1Qk5tU202KzhtNnhhSE9hd2sraUtBSlh6Ci9MWGtqSWZsWDJFeFNIMDFQbTVvRmxkSy9KWWFpNmdML3dDV3ZSTWkvSThjdnFxaUUzUmV4YmJ4RFg4alNLc2gKdG5qV3RwcjJTYkU3K3JWY3o5ZUI0RDdFUENlNHVNdWJPcnJPK2FReVMvcWdsKzJPMS94d0tVNGRyQVYvVEVRYwprWFA2R3hsYnRJTFRWTERGM0RzUExkM0VidXRBclBWaDdvcUdsZWphcjcrbWJZWWNqbGdCSWc4cTNRMmRTL1NoCjI3TGREZlJLT1MzZ0NjRmM2bEVMa1hXeHVUZUliV0ZtcE9JTHNvK2hMUFhGdEVnaHRibWt1eWxzMlA4Yy9KWnEKOHRMekNRYzlpd3doCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    server: https://071F4E9DCD133A6336A070919E51ED56.yl4.us-east-1.eks.amazonaws.com
+  name: virtualtechbox-cluster.us-east-1.eksctl.io
+contexts:
+- context:
+    cluster: virtualtechbox-cluster.us-east-1.eksctl.io
+    user: i-0cbbd8e92422aacbb@virtualtechbox-cluster.us-east-1.eksctl.io
+  name: i-0cbbd8e92422aacbb@virtualtechbox-cluster.us-east-1.eksctl.io
+current-context: i-0cbbd8e92422aacbb@virtualtechbox-cluster.us-east-1.eksctl.io
+kind: Config
+preferences: {}
+users:
+- name: i-0cbbd8e92422aacbb@virtualtechbox-cluster.us-east-1.eksctl.io
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      args:
+      - eks
+      - get-token
+      - --output
+      - json
+      - --cluster-name
+      - virtualtechbox-cluster
+      - --region
+      - us-east-1
+      command: aws
+      env:
+      - name: AWS_STS_REGIONAL_ENDPOINTS
+        value: regional
+      provideClusterInfo: false
